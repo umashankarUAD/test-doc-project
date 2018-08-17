@@ -33,7 +33,7 @@ Wercker already has some built-in steps to perform basic Docker operations. Thes
 [Building an Image]: https://devcenter.wercker.com/administration/containers/building-an-image/
 ## Using the Workflow Editor to create fan-in connections
 Fan-in connections come in handy when you want a particular pipeline to depend on specific preceding pipeline(s) to complete executing and also select the source of the artifact it is going to consume.
-In the following example, the _system-test_ pipeline is waiting for the _unit-test_ and _integration-test_ pipelines to finish, and is also going to consume artifacts from both the pipelines. ![Workflow]https://devcenter.wercker.com/development/workflows/managing-pipeline-artifacts/workflow-editor-for-fan-in.png
+In the following example, the _system-test_ pipeline is waiting for the _unit-test_ and _integration-test_ pipelines to finish, and is also going to consume artifacts from both the pipelines. ![Workflow](https://devcenter.wercker.com/development/workflows/managing-pipeline-artifacts/workflow-editor-for-fan-in.png)
 To establish a fan-in connection using the Workflow Editor:
 1. Click a pipeline on which the successive pipeline is depending. For example, **integration-test**.
 2. Click the pipeline that you want to fan into. For example, **system-test**.
