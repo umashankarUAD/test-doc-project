@@ -1,13 +1,16 @@
 # Direct Docker Access
 > This is a new feature and is currently restricted to specific users. Contact the Wercker team if you would like to use it.
 Sometimes your pipelines need to be able to access a Docker daemon directly. You can now use Docker commands such as docker build, docker run, docker push in your pipeline, with full access to all their features.
+> Note: This is a new Note.
 ## Configuration
 Simply set the property _docker: true_ in your pipeline and a Docker daemon will be provisioned exclusively for your pipeline. When your pipeline terminates, the daemon (and the host on which it runs) is destroyed.
+``` yaml
 build:  
  box: alpine  
  docker: true  
  steps:  
  ...
+ ```
 You can use the _docker_ command or any tool or a library that requires direct access to a Docker daemon. The environment variable _DOCKER_HOST_ is set to the URI of the daemon.
 Note that if your pipeline needs to use the _docker_ command, you will need to specify a box image that already has Docker installed or add a step to install it.
 ## Environment Variables
@@ -32,7 +35,7 @@ Wercker already has some built-in steps to perform basic Docker operations. Thes
 [Building an Image]: https://devcenter.wercker.com/administration/containers/building-an-image/
 ## Using the Workflow Editor to create fan-in connections
 Fan-in connections come in handy when you want a particular pipeline to depend on specific preceding pipeline(s) to complete executing and also select the source of the artifact it is going to consume.
-In the following example, the _system-test_ pipeline is waiting for the _unit-test_ and _integration-test_ pipelines to finish, and is also going to consume artifacts from both the pipelines. ![Workflow]https://devcenter.wercker.com/development/workflows/managing-pipeline-artifacts/workflow-editor-for-fan-in.png
+In the following example, the _system-test_ pipeline is waiting for the _unit-test_ and _integration-test_ pipelines to finish, and is also going to consume artifacts from both the pipelines. ![Workflow](https://devcenter.wercker.com/development/workflows/managing-pipeline-artifacts/workflow-editor-for-fan-in.png)
 To establish a fan-in connection using the Workflow Editor:
 1. Click a pipeline on which the successive pipeline is depending. For example, **integration-test**.
 2. Click the pipeline that you want to fan into. For example, **system-test**.
