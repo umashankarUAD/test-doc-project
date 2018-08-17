@@ -4,11 +4,13 @@ Sometimes your pipelines need to be able to access a Docker daemon directly. You
 > Note: This is a new Note.
 ## Configuration
 Simply set the property _docker: true_ in your pipeline and a Docker daemon will be provisioned exclusively for your pipeline. When your pipeline terminates, the daemon (and the host on which it runs) is destroyed.
+``` yaml
 build:  
  box: alpine  
  docker: true  
  steps:  
  ...
+ ```
 You can use the _docker_ command or any tool or a library that requires direct access to a Docker daemon. The environment variable _DOCKER_HOST_ is set to the URI of the daemon.
 Note that if your pipeline needs to use the _docker_ command, you will need to specify a box image that already has Docker installed or add a step to install it.
 ## Environment Variables
