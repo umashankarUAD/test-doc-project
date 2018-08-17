@@ -1,6 +1,7 @@
 # Direct Docker Access
 > This is a new feature and is currently restricted to specific users. Contact the Wercker team if you would like to use it.
 Sometimes your pipelines need to be able to access a Docker daemon directly. You can now use Docker commands such as docker build, docker run, docker push in your pipeline, with full access to all their features.
+> Note: This is a new Note.
 ## Configuration
 Simply set the property _docker: true_ in your pipeline and a Docker daemon will be provisioned exclusively for your pipeline. When your pipeline terminates, the daemon (and the host on which it runs) is destroyed.
 build:  
