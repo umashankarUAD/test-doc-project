@@ -31,8 +31,8 @@ The _curl_ command is then used to send a HTTP **GET** request to the web server
 Finally, the _docker kill_ command is used to kill the container.
 ## How does direct Docker access relate to the internal steps for Docker?
 Wercker already has some built-in steps to perform basic Docker operations. These are _internal/docker-build_, _internal/docker-push_, _internal/docker-scratch-push_, _internal/docker-run_ and _internal/docker-kill_. For more information see [Internal Steps] and [Building an image].
-[Internal Steps]: https://devcenter.wercker.com/development/steps/internal-steps/
-[Building an Image]: https://devcenter.wercker.com/administration/containers/building-an-image/
+[Internal Steps]: (https://devcenter.wercker.com/development/steps/internal-steps/)
+![Building an Image]:(workflow-editor-for-fan-in.png)
 ## Using the Workflow Editor to create fan-in connections
 Fan-in connections come in handy when you want a particular pipeline to depend on specific preceding pipeline(s) to complete executing and also select the source of the artifact it is going to consume.
 In the following example, the _system-test_ pipeline is waiting for the _unit-test_ and _integration-test_ pipelines to finish, and is also going to consume artifacts from both the pipelines. ![Workflow](https://devcenter.wercker.com/development/workflows/managing-pipeline-artifacts/workflow-editor-for-fan-in.png)

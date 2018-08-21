@@ -1,0 +1,5 @@
+The following additional environment variables are made available in your pipeline:
+
+| --- | --- | --- |
+| `DOCKER_HOST` | `w-HuMwpXsKhN` | URI of docker daemon |
+| `DOCKER_NETWORK_NAME` | `tcp://10.15.54.245:14567` | Name of Docker bridge network used by the box (pipeline container) and the services |
